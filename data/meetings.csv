@@ -1,0 +1,121 @@
+meeting_id,client_id,advisor_id,meeting_date,meeting_type,status
+M0001,C001,A01,2022-05-29,Onboarding,Completed
+M0002,C001,A01,2022-12-09,Check-in,Completed
+M0003,C001,A01,2023-06-22,Annual Review,No Show
+M0004,C002,A01,2024-11-05,Onboarding,Completed
+M0005,C002,A01,2025-04-02,Check-in,Completed
+M0006,C002,A01,2025-05-25,Check-in,Canceled
+M0007,C003,A01,2023-05-08,Onboarding,Completed
+M0008,C003,A01,2025-06-04,Annual Review,Done
+M0009,C003,A01,2024-12-25,Check-in,Completed
+M0010,C004,A01,2023-04-03,Onboarding,Completed
+M0011,C004,A01,2024-01-29,Portfolio Review,Completed
+M0012,C004,A01,2023-12-11,Annual Review,Canceled
+M0013,C004,A01,2023-05-18,Annual Review,Completed
+M0014,C005,A05,2024-03-23,Onboarding,Completed
+M0015,C005,A05,2025-13-02,Annual Review,Scheduled
+M0016,C006,A02,2023-08-17,Onboarding,Completed
+M0017,C006,A02,2024-03-30,Portfolio Review,Completed
+M0018,C006,A02,2024-05-17,Portfolio Review,Canceled
+M0019,C007,A03,2023-01-06,Onboarding,Completed
+M0020,C007,A03,2025-09-05,Check-in,No Show
+M0021,C007,A03,2025-06-15,Check-in,Completed
+M0022,C007,A03,2025-06-13,Check-in,Completed
+M0023,C008,A01,2022-05-09,Onboarding,Completed
+M0024,C008,A01,2024-11-19,Check-in,Completed
+M0025,C009,A05,2024-05-25,Onboarding,Completed
+M0026,C009,A05,2025-08-02,Annual Review,Completed
+M0027,C009,A05,2025-04-19,Annual Review,Completed
+M0028,C010,A03,2023-09-06,Onboarding,Completed
+M0029,C010,A03,2024-03-02,Annual Review,Completed
+M0030,C011,A05,2023-09-07,Onboarding,Completed
+M0031,C011,A05,2025-07-04,Annual Review,Completed
+M0032,C012,A05,2022-05-30,Onboarding,Completed
+M0033,C012,A05,2022-08-26,Annual Review,Completed
+M0034,C013,A02,2024-09-28,Onboarding,Completed
+M0035,C013,A02,2025-09-22,Check-in,Completed
+M0036,C013,A02,2024-12-01,Check-in,Completed
+M0037,C013,A02,2025-08-26,Portfolio Review,Completed
+M0038,C014,A03,2023-11-28,Onboarding,Completed
+M0039,C014,A03,2024-03-04,Check-in,Canceled
+M0040,C014,A03,2024-04-15,Annual Review,Completed
+M0041,C014,A03,2023-10-14,Annual Review,Completed
+M0042,C015,A04,2022-05-21,Onboarding,Completed
+M0043,C015,A04,2022-12-16,Check-in,Completed
+M0044,C015,A04,2025-02-21,Annual Review,Completed
+M0045,C015,A04,2023-08-13,Portfolio Review,Completed
+M0046,C016,A01,2022-05-05,Onboarding,Completed
+M0047,C016,A01,2023-11-20,Annual Review,Completed
+M0048,C016,A01,2024-01-03,Annual Review,Scheduled
+M0049,C017,A04,2023-08-06,Onboarding,Completed
+M0050,C017,A04,2024-07-29,Check-in,Completed
+M0051,C017,A04,2024-06-25,Check-in,Scheduled
+M0052,C018,A03,2022-12-11,Onboarding,Completed
+M0053,C018,A03,2023-02-10,Portfolio Review,Completed
+M0054,C018,A03,2023-04-20,Portfolio Review,Completed
+M0055,C019,A03,2022-09-22,Onboarding,Completed
+M0056,C019,A03,2024-01-08,Check-in,Canceled
+M0057,C020,A01,2022-12-07,Onboarding,Completed
+M0058,C020,A01,2024-08-16,Portfolio Review,Completed
+M0059,C021,A04,2023-07-25,Onboarding,Completed
+M0060,C021,A04,2025-02-10,Annual Review,Completed
+M0061,C022,A02,2022-06-19,Onboarding,Completed
+M0062,C022,A02,2022-07-27,Portfolio Review,Completed
+M0063,C023,A04,2023-01-09,Onboarding,Completed
+M0064,C023,A04,2025-01-19,Annual Review,No Show
+M0065,C023,A04,2024-10-06,Portfolio Review,No Show
+M0066,C024,A05,2024-01-27,Onboarding,Completed
+M0067,C024,A05,2024-11-18,Check-in,Canceled
+M0068,C024,A05,2024-12-12,Annual Review,Canceled
+M0069,C024,A05,2024-10-20,Portfolio Review,Completed
+M0070,C025,A05,2022-04-21,Onboarding,Completed
+M0071,C025,A05,2022-11-02,Portfolio Review,Scheduled
+M0072,C025,A05,2025-07-13,Annual Review,Completed
+M0073,C025,A05,2024-05-18,Annual Review,Completed
+M0074,C026,A04,2024-03-18,Onboarding,Completed
+M0075,C026,A04,2024-07-14,Portfolio Review,Canceled
+M0076,C026,A04,2024-05-12,Portfolio Review,Completed
+M0077,C027,A01,2023-03-04,Onboarding,Completed
+M0078,C027,A01,2024-06-14,Check-in,Completed
+M0079,C027,A01,2024-04-25,Check-in,Completed
+M0080,C028,A01,2022-07-29,Onboarding,Completed
+M0081,C028,A01,2023-05-14,Check-in,Completed
+M0082,C028,A01,2022-11-05,Portfolio Review,Completed
+M0083,C029,A03,2022-02-22,Onboarding,Completed
+M0084,C029,A03,2023-02-05,Portfolio Review,Completed
+M0085,C029,A03,2024-01-15,Annual Review,Completed
+M0086,C029,A03,2023-09-01,Check-in,Completed
+M0087,C030,A02,2023-06-01,Onboarding,Completed
+M0088,C030,A02,2024-10-16,Check-in,Canceled
+M0089,C030,A02,2024-02-29,Check-in,Completed
+M0090,C031,A01,2022-08-25,Onboarding,Completed
+M0091,C031,A01,2023-08-06,Check-in,Completed
+M0092,C031,A01,2024-02-13,Check-in,Completed
+M0093,C032,A03,2022-06-25,Onboarding,Completed
+M0094,C032,A03,2024-07-07,Annual Review,Completed
+M0095,C032,A03,2023-08-16,Portfolio Review,No Show
+M0096,C032,A03,2023-02-18,Annual Review,No Show
+M0097,C033,A02,2024-11-23,Onboarding,Completed
+M0098,C033,A02,2025-04-02,Portfolio Review,Completed
+M0099,C034,A05,2022-02-25,Onboarding,Completed
+M0100,C034,A05,2023-12-05,Check-in,Completed
+M0101,C035,A03,2024-11-27,Onboarding,Completed
+M0102,C035,A03,2025-04-06,Annual Review,Completed
+M0103,C035,A03,2025-02-19,Portfolio Review,Completed
+M0104,C036,A05,2024-10-26,Onboarding,Completed
+M0105,C036,A05,2025-07-20,Annual Review,Completed
+M0106,C036,A05,2025-07-06,Check-in,Completed
+M0107,C037,A02,2024-03-31,Onboarding,Completed
+M0108,C037,A02,2025-02-27,Portfolio Review,Completed
+M0109,C037,A02,2025-01-18,Check-in,Scheduled
+M0110,C037,A02,2024-05-05,Check-in,Completed
+M0111,C038,A04,2023-12-30,Onboarding,Completed
+M0112,C038,A04,2025-09-07,Check-in,Scheduled
+M0113,C038,A04,2025-04-04,Annual Review,Completed
+M0114,C039,A03,2023-02-01,Onboarding,Completed
+M0115,C039,A03,2025-08-20,Check-in,Scheduled
+M0116,C039,A03,2025-07-22,Annual Review,Completed
+M0117,C039,A03,2024-12-18,Annual Review,Completed
+M0118,C040,A03,2024-01-17,Onboarding,Completed
+M0119,C040,A03,2024-11-08,Check-in,Scheduled
+M0120,C040,A03,2025-04-20,Annual Review,Scheduled

@@ -1,0 +1,15 @@
+severity,table,check,column,record_id,value,message,likely_root_cause
+Critical,accounts,foreign_key,client_id,ACC-1026,C099,client_id 'C099' not found in clients.client_id,Child record points to a parent that was never created or was deleted.
+Critical,accounts,reconciliation,reported_total_value,ACC-1011,"28,971.07","Reported 28,971.07 vs sum of holdings 16,471.07 (variance +12,500.00)",Summary total isn't refreshed when underlying records change.
+Critical,clients,required,last_name,C022,,last_name is required but blank,"Field not enforced as mandatory at entry, or dropped during import."
+Critical,clients,unique,client_id,C017,C017,Duplicate client_id,"Same record created twice, often from a re-import or double submit."
+Critical,holdings,calculated_field,market_value,H00013,"76,926.80","market_value is 76,926.80 but quantity x price = 76,676.80 (off by 250.00)",Stored value was edited manually or calculated from stale inputs.
+Critical,holdings,foreign_key,account_id,H99999,ACC-9999,account_id 'ACC-9999' not found in accounts.account_id,Child record points to a parent that was never created or was deleted.
+Critical,meetings,type,meeting_date,M0015,2025-13-02,meeting_date is not a valid date,Free-text entry or a bad export format; value can't be parsed.
+Warning,clients,allowed_values,risk_profile,C009,Agressive,"'Agressive' is not one of ['Conservative', 'Moderate', 'Aggressive']",Dropdown not enforced; value typed manually (typo or old label).
+Warning,clients,pattern,email,C004,jordan.lee@gmail,email doesn't match the expected format,Input format not validated at entry.
+Warning,holdings,allowed_values,asset_class,H00031,Equities,"'Equities' is not one of ['Equity', 'Fixed Income', 'ETF', 'Mutual Fund', 'Cash']",Dropdown not enforced; value typed manually (typo or old label).
+Warning,holdings,min_value,quantity,H00006,-40.0,quantity is below the minimum of 0,Sign error or reversal entered as a negative amount.
+Warning,holdings,min_value,market_value,H00006,-13592.0,market_value is below the minimum of 0,Sign error or reversal entered as a negative amount.
+Warning,meetings,allowed_values,status,M0008,Done,"'Done' is not one of ['Scheduled', 'Completed', 'Canceled', 'No Show']",Dropdown not enforced; value typed manually (typo or old label).
+Warning,meetings,date_order,meeting_date,M0041,2023-10-14,meeting_date 2023-10-14 is before onboard_date 2023-11-28,"Date entered incorrectly, or record backdated during migration."

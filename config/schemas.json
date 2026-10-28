@@ -1,0 +1,93 @@
+{
+  "description": "Validation rules for the Client, Portfolio, and Meetings modules of a fictional advisory dashboard.",
+  "tables": {
+    "clients": {
+      "file": "clients.csv",
+      "primary_key": "client_id",
+      "columns": {
+        "client_id":    {"type": "string", "required": true, "unique": true, "pattern": "^C\\d{3}$"},
+        "first_name":   {"type": "string", "required": true},
+        "last_name":    {"type": "string", "required": true},
+        "email":        {"type": "string", "required": true, "pattern": "^[^@\\s]+@[^@\\s]+\\.[A-Za-z]{2,}$"},
+        "risk_profile": {"type": "string", "required": true, "allowed": ["Conservative", "Moderate", "Aggressive"]},
+        "advisor_id":   {"type": "string", "required": true, "pattern": "^A\\d{2}$"},
+        "onboard_date": {"type": "date",   "required": true},
+        "status":       {"type": "string", "required": true, "allowed": ["Active", "Inactive"]}
+      }
+    },
+    "accounts": {
+      "file": "accounts.csv",
+      "primary_key": "account_id",
+      "columns": {
+        "account_id":          {"type": "string", "required": true, "unique": true, "pattern": "^ACC-\\d{4}$"},
+        "client_id":           {"type": "string", "required": true},
+        "account_type":        {"type": "string", "required": true, "allowed": ["Brokerage", "Traditional IRA", "Roth IRA", "401k Rollover", "Trust"]},
+        "opened_date":         {"type": "date",   "required": true},
+        "reported_total_value": {"type": "number", "required": true, "min": 0}
+      }
+    },
+    "holdings": {
+      "file": "holdings.csv",
+      "primary_key": "holding_id",
+      "columns": {
+        "holding_id":   {"type": "string", "required": true, "unique": true},
+        "account_id":   {"type": "string", "required": true},
+        "ticker":       {"type": "string", "required": true, "pattern": "^[A-Z]{3,5}$"},
+        "asset_class":  {"type": "string", "required": true, "allowed": ["Equity", "Fixed Income", "ETF", "Mutual Fund", "Cash"]},
+        "quantity":     {"type": "number", "required": true, "min": 0},
+        "price":        {"type": "number", "required": true, "min": 0},
+        "market_value": {"type": "number", "required": true, "min": 0}
+      }
+    },
+    "meetings": {
+      "file": "meetings.csv",
+      "primary_key": "meeting_id",
+      "columns": {
+        "meeting_id":   {"type": "string", "required": true, "unique": true},
+        "client_id":    {"type": "string", "required": true},
+        "advisor_id":   {"type": "string", "required": true, "pattern": "^A\\d{2}$"},
+        "meeting_date": {"type": "date",   "required": true},
+        "meeting_type": {"type": "string", "required": true, "allowed": ["Onboarding", "Annual Review", "Portfolio Review", "Check-in"]},
+        "status":       {"type": "string", "required": true, "allowed": ["Scheduled", "Completed", "Canceled", "No Show"]}
+      }
+    }
+  },
+  "foreign_keys": [
+    {"table": "accounts", "column": "client_id",  "ref_table": "clients",  "ref_column": "client_id"},
+    {"table": "holdings", "column": "account_id", "ref_table": "accounts", "ref_column": "account_id"},
+    {"table": "meetings", "column": "client_id",  "ref_table": "clients",  "ref_column": "client_id"}
+  ],
+  "business_rules": {
+    "calculated_fields": [
+      {
+        "name": "Holding market value = quantity x price",
+        "table": "holdings",
+        "target": "market_value",
+        "factors": ["quantity", "price"],
+        "tolerance": 0.01
+      }
+    ],
+    "reconciliations": [
+      {
+        "name": "Account total matches sum of its holdings",
+        "parent_table": "accounts",
+        "parent_key": "account_id",
+        "parent_value": "reported_total_value",
+        "child_table": "holdings",
+        "child_key": "account_id",
+        "child_value": "market_value",
+        "tolerance": 1.00
+      }
+    ],
+    "date_order": [
+      {
+        "name": "Meeting date is on or after client onboarding",
+        "table": "meetings",
+        "date_column": "meeting_date",
+        "ref_table": "clients",
+        "join_key": "client_id",
+        "ref_date_column": "onboard_date"
+      }
+    ]
+  }
+}
